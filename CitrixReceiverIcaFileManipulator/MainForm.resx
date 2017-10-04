@@ -1,0 +1,617 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="labelVRes.Location" type="System.Drawing.Point, System.Drawing">
+    <value>277, 39</value>
+  </data>
+  <data name="&gt;&gt;checkBoxResolution.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="checkBoxResolution.Text" xml:space="preserve">
+    <value>Adapt Resolution</value>
+  </data>
+  <data name="buttonDragDropStore.Text" xml:space="preserve">
+    <value>button1</value>
+  </data>
+  <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>823, 160</value>
+  </data>
+  <data name="buttonFindFile.Text" xml:space="preserve">
+    <value>...</value>
+  </data>
+  <data name="&gt;&gt;buttonFindFile.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonDragDropStore.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="buttonStoreAndExecute.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="buttonStore.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="&gt;&gt;textBoxFile.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;textBoxVRes.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>807, 121</value>
+  </data>
+  <data name="&gt;&gt;labelVRes.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="textBoxVRes.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 20</value>
+  </data>
+  <data name="&gt;&gt;labelFileDragAndDrop.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="textBoxHRes.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 20</value>
+  </data>
+  <data name="buttonStore.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="checkBoxResolution.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="buttonStoreAndExecute.Size" type="System.Drawing.Size, System.Drawing">
+    <value>118, 23</value>
+  </data>
+  <data name="textBoxVRes.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;checkBoxResolution.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="textBoxFile.Size" type="System.Drawing.Size, System.Drawing">
+    <value>733, 20</value>
+  </data>
+  <data name="buttonDragDropStore.Size" type="System.Drawing.Size, System.Drawing">
+    <value>94, 82</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="buttonDragDropStoreAndExecute.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Stretch</value>
+  </data>
+  <data name="&gt;&gt;buttonFindFile.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;buttonDragDropStore.Name" xml:space="preserve">
+    <value>buttonDragDropStore</value>
+  </data>
+  <data name="&gt;&gt;textBoxVRes.Name" xml:space="preserve">
+    <value>textBoxVRes</value>
+  </data>
+  <data name="labelFileDragAndDrop.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;checkBoxResolution.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;buttonFindFile.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;labelFileDragAndDrop.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;textBoxHRes.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="checkBoxTransparentKeyPassthrough.Size" type="System.Drawing.Size, System.Drawing">
+    <value>160, 17</value>
+  </data>
+  <data name="buttonDragDropStoreAndExecute.Text" xml:space="preserve">
+    <value>button2</value>
+  </data>
+  <data name="&gt;&gt;labelHRes.Name" xml:space="preserve">
+    <value>labelHRes</value>
+  </data>
+  <data name="&gt;&gt;textBoxFile.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelFileDragAndDrop.Name" xml:space="preserve">
+    <value>labelFileDragAndDrop</value>
+  </data>
+  <data name="checkBoxTransparentKeyPassthrough.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;buttonDragDropStoreAndExecute.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="labelVRes.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;checkBoxResolution.Name" xml:space="preserve">
+    <value>checkBoxResolution</value>
+  </data>
+  <data name="buttonFindFile.Size" type="System.Drawing.Size, System.Drawing">
+    <value>34, 23</value>
+  </data>
+  <data name="labelHRes.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;buttonStore.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelFileDragAndDrop.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="checkBoxResolution.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="buttonToggleAlwaysOnTop.Text" xml:space="preserve">
+    <value>Always On Top</value>
+  </data>
+  <data name="buttonDragDropStore.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="labelHRes.Text" xml:space="preserve">
+    <value>HRes:</value>
+  </data>
+  <data name="&gt;&gt;buttonStore.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;buttonStoreAndExecute.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="buttonDragDropStoreAndExecute.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="buttonToggleAlwaysOnTop.Location" type="System.Drawing.Point, System.Drawing">
+    <value>217, 86</value>
+  </data>
+  <data name="&gt;&gt;labelHRes.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="buttonToggleAlwaysOnTop.Size" type="System.Drawing.Size, System.Drawing">
+    <value>123, 23</value>
+  </data>
+  <data name="buttonDragDropStore.Location" type="System.Drawing.Point, System.Drawing">
+    <value>422, 36</value>
+  </data>
+  <data name="buttonStoreAndExecute.Location" type="System.Drawing.Point, System.Drawing">
+    <value>93, 84</value>
+  </data>
+  <data name="checkBoxTransparentKeyPassthrough.Text" xml:space="preserve">
+    <value>TransparentKeyPassthrough</value>
+  </data>
+  <data name="&gt;&gt;buttonDragDropStore.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;textBoxVRes.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="checkBoxTransparentKeyPassthrough.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 61</value>
+  </data>
+  <data name="&gt;&gt;labelVRes.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="textBoxHRes.Location" type="System.Drawing.Point, System.Drawing">
+    <value>171, 36</value>
+  </data>
+  <data name="labelVRes.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>MainForm</value>
+  </data>
+  <data name="&gt;&gt;buttonStoreAndExecute.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="buttonStoreAndExecute.Text" xml:space="preserve">
+    <value>Store and Execute</value>
+  </data>
+  <data name="buttonToggleAlwaysOnTop.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="&gt;&gt;textBoxHRes.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="textBoxFile.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;checkBoxTransparentKeyPassthrough.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="buttonStore.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 84</value>
+  </data>
+  <data name="&gt;&gt;textBoxHRes.Name" xml:space="preserve">
+    <value>textBoxHRes</value>
+  </data>
+  <data name="&gt;&gt;buttonDragDropStoreAndExecute.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="$this.MaximumSize" type="System.Drawing.Size, System.Drawing">
+    <value>823, 160</value>
+  </data>
+  <data name="&gt;&gt;textBoxVRes.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="textBoxHRes.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;labelHRes.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonToggleAlwaysOnTop.Name" xml:space="preserve">
+    <value>buttonToggleAlwaysOnTop</value>
+  </data>
+  <data name="&gt;&gt;buttonStoreAndExecute.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;buttonDragDropStoreAndExecute.Name" xml:space="preserve">
+    <value>buttonDragDropStoreAndExecute</value>
+  </data>
+  <data name="&gt;&gt;buttonToggleAlwaysOnTop.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEALi4AAAEAGADAGgAAFgAAACgAAAAuAAAAXAAAAAEAGAAAAAAAAAAAAGAAAABgAAAAAAAAAAAA
+        AADx7un///z6//70///u/f/o+fzn+Pvm+PnX6ejV6+bV6+bU6+PW6eba6Obe5ejh5ebj5ebl5eXl5eXl
+        5eXl5eXl5eXl5eXl5eXm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubo6Oji4uLd3d3c3Nze3t7l5eXy8vL+
+        /v74+Pj9/f3///////////////8AAP///P//++ry8eT0897y89Dj5sbV2MLO0LTAwLPBv6/Dvq3EvK3D
+        vrHCvrjAv7vAv72/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v8DAwMDAwMDAwMDAwL+/v7+/v7+/v7+/v7q6
+        ur+/v8bGxsjIyMLCwry8vMDAwMjIyPT09Ozs7O7u7vz8/P///////wAA/+/x//v79v//2vLwsMzMf5eX
+        U1xgNjY8Ozc8Nzk6LTw4Jj42JD82Jz81MT42Njw3OTw6Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7PDw8PDw8
+        Ozs7Ozs7Ojo6Ojo6Ojo6OTk5QUFBPDw8NTU1Ly8vNTU1UVFRgYGBqampvb290tLS6urq9/f3/Pz8////
+        AAD/+////f/Q2tptg4EhPT0YLS4xMTc+MztBMDk/MzkyNjcqOTUmOzMpPTEyPDA1OjE5Ojg5OTk5OTk5
+        OTk5OTk5OTk5OTk5OTk6Ojo6Ojo6Ojo5OTk4ODg3Nzc3Nzc3NzcqKioxMTE4ODg4ODguLi4oKCgvLy88
+        PDxnZ2eoqKjg4ODr6+vv7+////8AAP/7/9TGymltbiIwLxQjJSYvMzsyPEEqOEMmNUEnNTkpNDMuMC0x
+        LCw0KjI1JjI0KDIzMTAyMzAyMzAyMzAyMzAyMzAyMzAyMzI0NTI0NTEzNDAyMy8xMi4wMS4wMS0vMDU1
+        NTIyMjIyMjIyMi8vLykpKSkpKS0tLTAwMGVlZaamptLS0uvr6/v7+wAA/+7zlYeLMjEzICgoKTU3ICsv
+        Hh8pKyQzMiY4NiY4NSg4NSo0NC0wNDArNzQmNTMoMjMxMDIzMDIzMDIzMDIzMDIzMDIzMDIzMjQ1MjQ1
+        MTM0MDIzLzEyLjAxLS8wLS8wMjIyKCgoIyMjKCgoLy8vMDAwLCwsKioqJiYmLCwsYGBguLi48PDw9fX1
+        AAD05uwnHB8iGx40NjcOGx0WLS8BIykDJjMIJjkHHDIeJDsoJDctIixAMjNDODAzLCMpJyYTFRYUFhcI
+        CgsBAwQMDg8GCAkBAwQKDA0NDxAcHh8pKywrLS4sLi8rLS4lJyguLi4oKCgmJiYqKiosLCwoKCglJSUk
+        JCQhISEjIyMvLy+fn5/R0dHz8/MAAIZ8gisiJSIaGx0fHw0jIQApKgA2OTaLk4HX6QhSag9AWgwmPhUZ
+        Kzw0Ox4SEB4VERIQEAUHCA0PEAMFBgABAgsNDgUHCAMFBgoMDRETFAQGBwAAAQ0PEB0fICUnKC8xMioq
+        KisrKyYmJh8fHyEhIScnJycnJyIiIiAgIB4eHh8fH3Z2dsbGxurq6gAAJh8kJh8iIhwdCBAPASYiAElF
+        CH18SNfeL8rZQ9HoEHybAD1bACQ6AAgWDQwQBwIDAQACJikta25yjZCUn6Kmqq2xoaSoo6aqgIOHWl1h
+        HiElBQgMEhUZDA8TBQgMGRscLi4uIyMjICAgJiYmIyMjGRkZGxsbJiYmHx8fHBwcERERQkJCvb294+Pj
+        AAATDRIZFBYiHR4MFxUAHhkgdHBL09Iw3eUV1+kp5f8tze8AcpQAKUQAABQADRhobnO3vL+qrbGcn6N8
+        f4Nsb3NqbXFfYmZrbnKUl5utsLS5vMCUl5tHSk4LDhIAAQUKDg8XFhgcHBwkJCQlJSUgICAaGhoZGRkc
+        HBwaGhocHBwQEBAdHR2/v7/h4eEAABsYGg4MDBgWFRIdGgAWER5sa13d4jDb6RLg+QDE5Rbf/x7J7wOC
+        oTKIoHuuvpexuF1obDo9QRATFwAAAwIFCQwPEwIFCRQXGwMGCgAAAzk8QJSXm6+ytpaZnVJVWQACAwAA
+        ARQUFCEhIRUVFRQUFCQkJCEhIQ0NDRAQEBoaGhYWFg4ODsTExOPj4wAAEhETCwsLDgwLDhcUABMQADI0
+        JY2aP9PpENHzB+H/AM37D9r/HsTnNbLOR5apAAINAAgPAAIGAgUJBgkNDhEVAAMHAAADJSgsNTg8HSAk
+        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
+        AUpYAU5hAUZhG3KNNLjQVt/1VrfRAEhiAAslADVOADxSADlLDElXFEhUDzI8NElRIzE3Mj9BtcPC0uPg
+        AABDRUU4Ojo8Pj5FR0dDRUVDRUVERkY/QUE/QUFERkYAAAAOEBCWmJjs7u7Mzs51enlUXFtOVFNfWltY
+        U1RRU1RDT1EuSktKbXE9XmcbT1sngosyk6Fao7md5P+B3Pc8j6sZRmcABSQIVGsvkaEii5gQanUQR1Yi
+        OUlEP05IN0RBOEI5Oj64wsLZ5+UAAD9BQURGRkZISENFRUBCQkRGRktNTU1PT05QUENFRUdJSSkrKw4Q
+        EFdZWb7AwODi4tHQ0p6goXuAgVtgYVxfY2dqblBWXURaYD5tdUyXn1rFzGzV4JTY72Whvg1ifDSBnAIl
+        Rg81U02es1fH02Pn7iKdoRJhaipQXFNMW00zQV1HU0g8Qru/wNvm5AAAOz09WFpaSEpKRUdHSEpKR0lJ
+        VVdXR0lJVVdXT1FRUFJSSEpKIiQkBggIKSsrZ2ZoramuzdbZz/Hxwujox97g19nh9Nfm4ePuieDkV9bX
+        WNLYYcLQQXSOACxJAGV6Y9vuR42kHlRrHWV3PKKuVeLlP9rWJq6sCWlpN1RbU0hSVj1HW0RMzsnL2+Df
+        AABWWFhLTU1ERkZWWFhYWlpLTU1QUlJTVVVSVFRMTk5RU1NcXl5WWFg4OjoaHBwPDA4tIylJTFFden52
+        nJ6TrLCjpq66oLCpsb5cyMlg7+xQwskAS1sAABcAHjoKhphN1OI+kKElW2wgUmQfZXI1pqhN2NRM3dUn
+        mJQhUVNNUFhfTVRtV1zJxMXn7OsAAI2NjVtbW09PT1NTU1JSUldXV1ZWVlZWVl1dXV1dXVpaWlhYWF9f
+        X2VlZVtbW1BJTEQxOjAcKBIKFAsOFhIaIRYiKDE9R0Nvdnbh3yWdnABKVQcxREFDYUtmgSuerU3Q2kiS
+        nj5hb0lXaUBQYEd2fmWwsm/TzkOdmC5gYEBTVlhSV4V8f83Pz/P7+gAAycnJa2trV1dXW1tbWFhYYGBg
+        WFhYXV1dV1dXZWVlaWlpXl5eWFhYX19fZWVlZmNlbWNpYldfWU5WXlZdXldeQ0dMMUdMLWBiNYyJJn5+
+        N2x2VGV4alh1SFlzIpahV9/jRJKYOFpgVVtmX11pUV5mSWluU42MOHd1RnJxOVFRU1dYsa6w5Ono+P//
+        AAD29vaBgYFfX19paWllZWVhYWFZWVlsbGxgYGBhYWFjY2NmZmZnZ2dkZGRfX19XXVxYbWtVbWtTaGZf
+        ZGV4ZGl0YGVhZmdeeHhFdHJHd3hLa3FUXGlxVWxcanwjqalE4ttKpqE0ZWNKY2VdaW1cY2ZMWFpYcHBJ
+        aGdGYmJIXVt5fn/e3d/09vb7//8AAP///8fHx42NjWFhYU9PT2JiYmpqamNjY2xsbGNjY2FhYWpqam9v
+        b25ubnJycnJ9e0VkXVN0bWZ1cXRvbohtcIRpbGlkY1tmY1x1cUtoZU9iZWttdYVqemFndC+XllrZ0FCd
+        lUlya1tpZ2NlZXRycmZramFyb0hfW0lbWoGJicfAw//5/Pr19v///wAA////////0NDQkpKScHBwcnJy
+        d3d3X19fZWVlampqc3Nzd3d3cHBwZWVlY2NjY2pnWnFpbHdviG1pj2hmjHFthHRuenJrcXhxXHRsXHhy
+        X3BtaWtsf253dm54T21yRm9xV3VwZGtmf2Vle1lafG5vYmtoUHdvTHVti5iW1MfJ/+vx//n///P4//3/
+        AAD4+Pj////39/f////W1taFhYVycnJ1dXV0dHRycnJubm5qampubm51dXV3d3dxeHVpenF1dm2XZ2Wi
+        ammVeHOBdm55cGd0eG1jfHJde3Bkcm5zc3OBdnl5a3FwaHJ4eX1sc3CBeHSldHaXZWeLdnVjcWtnmY+V
+        x73j7On/9vj/9f3/9f3/+v//+v4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+</value>
+  </data>
+  <data name="labelFileDragAndDrop.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="&gt;&gt;buttonDragDropStoreAndExecute.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;buttonToggleAlwaysOnTop.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelHRes.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;labelVRes.Name" xml:space="preserve">
+    <value>labelVRes</value>
+  </data>
+  <data name="&gt;&gt;buttonStore.Name" xml:space="preserve">
+    <value>buttonStore</value>
+  </data>
+  <data name="labelHRes.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="checkBoxResolution.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 38</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Citrix Receiver ica File Manipulator</value>
+  </data>
+  <data name="labelVRes.Text" xml:space="preserve">
+    <value>VRes:</value>
+  </data>
+  <data name="labelHRes.Location" type="System.Drawing.Point, System.Drawing">
+    <value>128, 39</value>
+  </data>
+  <data name="&gt;&gt;textBoxFile.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="&gt;&gt;buttonToggleAlwaysOnTop.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="buttonFindFile.Location" type="System.Drawing.Point, System.Drawing">
+    <value>751, 10</value>
+  </data>
+  <data name="&gt;&gt;checkBoxTransparentKeyPassthrough.Name" xml:space="preserve">
+    <value>checkBoxTransparentKeyPassthrough</value>
+  </data>
+  <data name="checkBoxResolution.Size" type="System.Drawing.Size, System.Drawing">
+    <value>107, 17</value>
+  </data>
+  <data name="&gt;&gt;textBoxHRes.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="labelVRes.Size" type="System.Drawing.Size, System.Drawing">
+    <value>36, 13</value>
+  </data>
+  <data name="labelFileDragAndDrop.Location" type="System.Drawing.Point, System.Drawing">
+    <value>346, 91</value>
+  </data>
+  <data name="textBoxVRes.Location" type="System.Drawing.Point, System.Drawing">
+    <value>316, 36</value>
+  </data>
+  <data name="buttonDragDropStoreAndExecute.Size" type="System.Drawing.Size, System.Drawing">
+    <value>85, 82</value>
+  </data>
+  <data name="buttonDragDropStore.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Stretch</value>
+  </data>
+  <data name="textBoxFile.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 12</value>
+  </data>
+  <data name="checkBoxTransparentKeyPassthrough.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;buttonStoreAndExecute.Name" xml:space="preserve">
+    <value>buttonStoreAndExecute</value>
+  </data>
+  <data name="buttonFindFile.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;checkBoxTransparentKeyPassthrough.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;buttonStore.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="labelHRes.Size" type="System.Drawing.Size, System.Drawing">
+    <value>37, 13</value>
+  </data>
+  <data name="&gt;&gt;textBoxFile.Name" xml:space="preserve">
+    <value>textBoxFile</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="buttonDragDropStoreAndExecute.Location" type="System.Drawing.Point, System.Drawing">
+    <value>523, 36</value>
+  </data>
+  <data name="buttonStore.Text" xml:space="preserve">
+    <value>Store</value>
+  </data>
+  <data name="&gt;&gt;labelVRes.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="labelFileDragAndDrop.Text" xml:space="preserve">
+    <value>File Drag&amp;Drop:</value>
+  </data>
+  <data name="labelFileDragAndDrop.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 13</value>
+  </data>
+  <data name="&gt;&gt;buttonDragDropStore.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;buttonFindFile.Name" xml:space="preserve">
+    <value>buttonFindFile</value>
+  </data>
+  <data name="&gt;&gt;checkBoxTransparentKeyPassthrough.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="$this.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+</root>
