@@ -1,25 +1,19 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Xml;
 
 namespace WindowsFormsApp1
 {
-    public partial class MainForm : Form
-    {
-        public MainForm()
+    public partial class MainForm : Form {
+        private string fileName;
+
+        public MainForm(string filename)
         {
             InitializeComponent();
+            fileName = filename;
         }
 
-        
+
 
         private void textBox1_DragEnter(object sender, DragEventArgs e)
         {
@@ -97,7 +91,7 @@ namespace WindowsFormsApp1
             }
             return true;
         }
-        
+
         private void manipulateFile()
         {
             string content = readFile(textBoxFile.Text);
@@ -211,6 +205,13 @@ namespace WindowsFormsApp1
             checkBoxTransparentKeyPassthrough.Checked = Properties.Settings.Default.checkBoxTransparentKeyPassthrough;
             textBoxHRes.Text = Properties.Settings.Default.HRes;
             textBoxVRes.Text = Properties.Settings.Default.VRes;
+            if (fileName != null)
+            {
+                textBoxFile.Text = fileName;
+                manipulateFile();
+                System.Diagnostics.Process.Start(textBoxFile.Text);
+                Application.Exit();
+            }
         }
 
         private void storeSettings()
