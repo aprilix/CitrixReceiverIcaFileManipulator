@@ -14,5 +14,8 @@
     <Setting Name="VRes" Type="System.String" Scope="User">
       <Value Profile="(Default)">1200</Value>
     </Setting>
+    <Setting Name="CitrixLocation" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\Program Files (x86)\Citrix\ICA Client\wfcrun32.exe</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

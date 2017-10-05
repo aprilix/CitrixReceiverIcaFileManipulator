@@ -205,11 +205,12 @@ namespace WindowsFormsApp1
             checkBoxTransparentKeyPassthrough.Checked = Properties.Settings.Default.checkBoxTransparentKeyPassthrough;
             textBoxHRes.Text = Properties.Settings.Default.HRes;
             textBoxVRes.Text = Properties.Settings.Default.VRes;
+            textBoxCitrix.Text = Properties.Settings.Default.CitrixLocation;
             if (fileName != null)
             {
                 textBoxFile.Text = fileName;
                 manipulateFile();
-                System.Diagnostics.Process.Start(textBoxFile.Text);
+                System.Diagnostics.Process.Start(textBoxCitrix.Text, textBoxFile.Text);
                 Application.Exit();
             }
         }
@@ -220,6 +221,7 @@ namespace WindowsFormsApp1
             Properties.Settings.Default.checkBoxTransparentKeyPassthrough = checkBoxTransparentKeyPassthrough.Checked;
             Properties.Settings.Default.HRes = textBoxHRes.Text;
             Properties.Settings.Default.VRes = textBoxVRes.Text;
+            Properties.Settings.Default.CitrixLocation = textBoxCitrix.Text;
             Properties.Settings.Default.Save();
         }
 
@@ -277,6 +279,19 @@ namespace WindowsFormsApp1
             else
             {
                 buttonToggleAlwaysOnTop.Text = "Always On Top";
+            }
+        }
+
+        private void buttonFindCitrix_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog fd = new OpenFileDialog();
+            fd.Filter = "Citrix Client (*.exe)|*.exe|All files (*.*)|*.*";
+            fd.InitialDirectory = @"C:\Program Files (x86)\Citrix\ICA Client\";
+            fd.Title = "Please select the location of wfcrun32.exe.";
+
+            if (fd.ShowDialog() == DialogResult.OK)
+            {
+                textBoxCitrix.Text = fd.FileName;
             }
         }
     }

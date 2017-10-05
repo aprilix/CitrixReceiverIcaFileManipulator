@@ -43,12 +43,15 @@
             this.buttonDragDropStoreAndExecute = new System.Windows.Forms.Button();
             this.buttonToggleAlwaysOnTop = new System.Windows.Forms.Button();
             this.labelFileDragAndDrop = new System.Windows.Forms.Label();
+            this.textBoxCitrix = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.buttonFindCitrix = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textBoxFile
             // 
-            resources.ApplyResources(this.textBoxFile, "textBoxFile");
             this.textBoxFile.AllowDrop = true;
+            resources.ApplyResources(this.textBoxFile, "textBoxFile");
             this.textBoxFile.Name = "textBoxFile";
             this.textBoxFile.DragDrop += new System.Windows.Forms.DragEventHandler(this.textBox1_DragDrop);
             this.textBoxFile.DragEnter += new System.Windows.Forms.DragEventHandler(this.textBox1_DragEnter);
@@ -112,9 +115,9 @@
             // 
             // buttonDragDropStore
             // 
-            resources.ApplyResources(this.buttonDragDropStore, "buttonDragDropStore");
             this.buttonDragDropStore.AllowDrop = true;
             this.buttonDragDropStore.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.store;
+            resources.ApplyResources(this.buttonDragDropStore, "buttonDragDropStore");
             this.buttonDragDropStore.Name = "buttonDragDropStore";
             this.buttonDragDropStore.UseVisualStyleBackColor = true;
             this.buttonDragDropStore.DragDrop += new System.Windows.Forms.DragEventHandler(this.buttonDragDropStore_DragDrop);
@@ -122,9 +125,9 @@
             // 
             // buttonDragDropStoreAndExecute
             // 
-            resources.ApplyResources(this.buttonDragDropStoreAndExecute, "buttonDragDropStoreAndExecute");
             this.buttonDragDropStoreAndExecute.AllowDrop = true;
             this.buttonDragDropStoreAndExecute.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.storeAndExecute;
+            resources.ApplyResources(this.buttonDragDropStoreAndExecute, "buttonDragDropStoreAndExecute");
             this.buttonDragDropStoreAndExecute.Name = "buttonDragDropStoreAndExecute";
             this.buttonDragDropStoreAndExecute.UseVisualStyleBackColor = true;
             this.buttonDragDropStoreAndExecute.DragDrop += new System.Windows.Forms.DragEventHandler(this.buttonDragDropStoreAndExecute_DragDrop);
@@ -142,10 +145,30 @@
             resources.ApplyResources(this.labelFileDragAndDrop, "labelFileDragAndDrop");
             this.labelFileDragAndDrop.Name = "labelFileDragAndDrop";
             // 
+            // textBoxCitrix
+            // 
+            resources.ApplyResources(this.textBoxCitrix, "textBoxCitrix");
+            this.textBoxCitrix.Name = "textBoxCitrix";
+            // 
+            // label1
+            // 
+            resources.ApplyResources(this.label1, "label1");
+            this.label1.Name = "label1";
+            // 
+            // buttonFindCitrix
+            // 
+            resources.ApplyResources(this.buttonFindCitrix, "buttonFindCitrix");
+            this.buttonFindCitrix.Name = "buttonFindCitrix";
+            this.buttonFindCitrix.UseVisualStyleBackColor = true;
+            this.buttonFindCitrix.Click += new System.EventHandler(this.buttonFindCitrix_Click);
+            // 
             // MainForm
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.buttonFindCitrix);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.textBoxCitrix);
             this.Controls.Add(this.labelFileDragAndDrop);
             this.Controls.Add(this.buttonToggleAlwaysOnTop);
             this.Controls.Add(this.buttonDragDropStoreAndExecute);
@@ -184,6 +207,9 @@
         private System.Windows.Forms.Button buttonDragDropStoreAndExecute;
         private System.Windows.Forms.Button buttonToggleAlwaysOnTop;
         private System.Windows.Forms.Label labelFileDragAndDrop;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox textBoxCitrix;
+        private System.Windows.Forms.Button buttonFindCitrix;
     }
 }
 
