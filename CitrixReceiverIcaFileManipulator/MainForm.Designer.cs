@@ -147,8 +147,11 @@
             // 
             // textBoxCitrix
             // 
+            this.textBoxCitrix.AllowDrop = true;
             resources.ApplyResources(this.textBoxCitrix, "textBoxCitrix");
             this.textBoxCitrix.Name = "textBoxCitrix";
+            this.textBoxCitrix.DragDrop += new System.Windows.Forms.DragEventHandler(this.textBoxCitrix_DragDrop);
+            this.textBoxCitrix.DragEnter += new System.Windows.Forms.DragEventHandler(this.textBoxCitrix_DragEnter);
             // 
             // label1
             // 

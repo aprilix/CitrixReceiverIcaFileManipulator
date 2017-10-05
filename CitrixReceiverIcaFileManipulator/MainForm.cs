@@ -285,13 +285,46 @@ namespace WindowsFormsApp1
         private void buttonFindCitrix_Click(object sender, EventArgs e)
         {
             OpenFileDialog fd = new OpenFileDialog();
-            fd.Filter = "Citrix Client (*.exe)|*.exe|All files (*.*)|*.*";
+            fd.Filter = "Citrix Client|wfcrun32.exe|Executables (*.exe)|*.exe|All files (*.*)|*.*";
             fd.InitialDirectory = @"C:\Program Files (x86)\Citrix\ICA Client\";
             fd.Title = "Please select the location of wfcrun32.exe.";
 
             if (fd.ShowDialog() == DialogResult.OK)
             {
                 textBoxCitrix.Text = fd.FileName;
+            }
+        }
+
+        private void textBoxCitrix_DragDrop(object sender, DragEventArgs e)
+        {
+            var files = (string[])e.Data.GetData(DataFormats.FileDrop);
+            textBoxCitrix.Text = files[0];
+        }
+
+        private void textBoxCitrix_DragEnter(object sender, DragEventArgs e)
+        {
+            if (e.Data.GetDataPresent(DataFormats.FileDrop))
+            {
+                var files = (string[])e.Data.GetData(DataFormats.FileDrop);
+                if (files.Length == 1)
+                {
+                    if (files[0].EndsWith(".exe"))
+                    {
+                        e.Effect = DragDropEffects.Copy;
+                    }
+                    else
+                    {
+                        e.Effect = DragDropEffects.None;
+                    }
+                }
+                else
+                {
+                    e.Effect = DragDropEffects.None;
+                }
+            }
+            else
+            {
+                e.Effect = DragDropEffects.None;
             }
         }
     }
