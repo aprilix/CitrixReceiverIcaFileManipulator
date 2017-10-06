@@ -2,18 +2,16 @@
 using System.IO;
 using System.Windows.Forms;
 
-namespace WindowsFormsApp1
+namespace CitrixReceiverIcaFileManipulator
 {
     public partial class MainForm : Form {
-        private string fileName;
+        private readonly string fileName;
 
         public MainForm(string filename)
         {
             InitializeComponent();
             fileName = filename;
         }
-
-
 
         private void textBox1_DragEnter(object sender, DragEventArgs e)
         {
@@ -64,15 +62,15 @@ namespace WindowsFormsApp1
         private void buttonExecute_Click(object sender, EventArgs e)
         {
             if (!checkFileOk()) return;
-            manipulateFile();
-            System.Diagnostics.Process.Start(textBoxFile.Text);
+            IcsManipulator.manipulateFile(textBoxFile.Text, checkBoxResolution.Checked, checkBoxTransparentKeyPassthrough.Checked, textBoxHRes.Text, textBoxVRes.Text);
+            execute();
             storeSettings();
         }
 
         private void buttonStore_Click(object sender, EventArgs e)
         {
             if (!checkFileOk()) return;
-            manipulateFile();
+            IcsManipulator.manipulateFile(textBoxFile.Text, checkBoxResolution.Checked, checkBoxTransparentKeyPassthrough.Checked, textBoxHRes.Text, textBoxVRes.Text);
             storeSettings();
         }
 
@@ -91,101 +89,13 @@ namespace WindowsFormsApp1
             }
             return true;
         }
-
-        private void manipulateFile()
-        {
-            string content = readFile(textBoxFile.Text);
-            content = manipulateResolution(content);
-            content = manipulateTransparentKeyPassthrough(content);
-            writeFile(textBoxFile.Text, content);
-        }
-
-        private string manipulateTransparentKeyPassthrough(string input)
-        {
-            if (checkBoxTransparentKeyPassthrough.Checked)
-            {
-                string[] elements = input.Split(new[] { '\r', '\n' });
-                string output = "";
-                foreach (string line in elements)
-                {
-                    if (!String.IsNullOrWhiteSpace(line))
-                    {
-                        if (line.StartsWith("TransparentKeyPassthrough="))
-                        {
-                            output += "TransparentKeyPassthrough=Remote\n";
-                        }
-                        else
-                        {
-                            output += line + "\n";
-                        }
-                    }
-                }
-                return output;
-            }
-            else
-            {
-                return input;
-            }
-        }
-
-        private string manipulateResolution(string input)
-        {
-            if (checkBoxResolution.Checked)
-            {
-                string[] elements = input.Split(new[] { '\r', '\n' });
-                string output = "";
-                foreach (string line in elements)
-                {
-                    if (!String.IsNullOrWhiteSpace(line))
-                    {
-                        if (line.StartsWith("DesiredHRES="))
-                        {
-                            output += "DesiredHRES=" + textBoxHRes.Text + "\n";
-                        }
-                        else if (line.StartsWith("DesiredVRES="))
-                        {
-                            output += "DesiredVRES=" + textBoxVRes.Text + "\n";
-                        }
-                        else
-                        {
-                            output += line + "\n";
-                        }
-                    }
-                }
-                return output;
-            }
-            else
-            {
-                return input;
-            }
-        }
-
-        private string readFile(String sFilename)
-        {
-            string sContent = "";
-
-            if (File.Exists(sFilename))
-            {
-                StreamReader myFile = new StreamReader(sFilename, System.Text.Encoding.Default);
-                sContent = myFile.ReadToEnd();
-                myFile.Close();
-            }
-            return sContent;
-        }
-
-        private void writeFile(String sFilename, String sLines)
-        {
-            StreamWriter myFile = new StreamWriter(sFilename);
-            myFile.Write(sLines);
-            myFile.Close();
-        }
-
+        
         private void buttonDragDropStore_DragDrop(object sender, DragEventArgs e)
         {
             var files = (string[])e.Data.GetData(DataFormats.FileDrop);
             textBoxFile.Text = files[0];
             if (!checkFileOk()) return;
-            manipulateFile();
+            IcsManipulator.manipulateFile(textBoxFile.Text, checkBoxResolution.Checked, checkBoxTransparentKeyPassthrough.Checked, textBoxHRes.Text, textBoxVRes.Text);
             storeSettings();
         }
 
@@ -194,8 +104,8 @@ namespace WindowsFormsApp1
             var files = (string[])e.Data.GetData(DataFormats.FileDrop);
             textBoxFile.Text = files[0];
             if (!checkFileOk()) return;
-            manipulateFile();
-            System.Diagnostics.Process.Start(textBoxFile.Text);
+            IcsManipulator.manipulateFile(textBoxFile.Text, checkBoxResolution.Checked, checkBoxTransparentKeyPassthrough.Checked, textBoxHRes.Text, textBoxVRes.Text);
+            execute();
             storeSettings();
         }
 
@@ -209,8 +119,8 @@ namespace WindowsFormsApp1
             if (fileName != null)
             {
                 textBoxFile.Text = fileName;
-                manipulateFile();
-                System.Diagnostics.Process.Start(textBoxCitrix.Text, textBoxFile.Text);
+                IcsManipulator.manipulateFile(textBoxFile.Text, checkBoxResolution.Checked, checkBoxTransparentKeyPassthrough.Checked, textBoxHRes.Text, textBoxVRes.Text);
+                execute();
                 Application.Exit();
             }
         }
@@ -326,6 +236,33 @@ namespace WindowsFormsApp1
             {
                 e.Effect = DragDropEffects.None;
             }
+        }
+
+        private void buttonDragAndDropExecute_DragDrop(object sender, DragEventArgs e)
+        {
+            var files = (string[])e.Data.GetData(DataFormats.FileDrop);
+            textBoxFile.Text = files[0];
+            if (!checkFileOk()) return;
+            execute();
+            storeSettings();
+        }
+
+        private void execute()
+        {
+            if (string.IsNullOrWhiteSpace(textBoxCitrix.Text)
+                || !File.Exists(textBoxCitrix.Text))
+            {
+                MessageBox.Show("Citrix Client not configured or existing!");
+                return;
+            }
+            System.Diagnostics.Process.Start(textBoxCitrix.Text, textBoxFile.Text);
+        }
+
+        private void buttonExecute_Click_1(object sender, EventArgs e)
+        {
+            if (!checkFileOk()) return;
+            execute();
+            storeSettings();
         }
     }
 }

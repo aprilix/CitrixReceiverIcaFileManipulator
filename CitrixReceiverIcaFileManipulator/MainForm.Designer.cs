@@ -1,4 +1,4 @@
-﻿namespace WindowsFormsApp1
+﻿namespace CitrixReceiverIcaFileManipulator
 {
     partial class MainForm
     {
@@ -39,13 +39,15 @@
             this.checkBoxTransparentKeyPassthrough = new System.Windows.Forms.CheckBox();
             this.buttonStoreAndExecute = new System.Windows.Forms.Button();
             this.buttonStore = new System.Windows.Forms.Button();
-            this.buttonDragDropStore = new System.Windows.Forms.Button();
-            this.buttonDragDropStoreAndExecute = new System.Windows.Forms.Button();
             this.buttonToggleAlwaysOnTop = new System.Windows.Forms.Button();
             this.labelFileDragAndDrop = new System.Windows.Forms.Label();
             this.textBoxCitrix = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.buttonFindCitrix = new System.Windows.Forms.Button();
+            this.buttonDragAndDropExecute = new System.Windows.Forms.Button();
+            this.buttonDragDropStoreAndExecute = new System.Windows.Forms.Button();
+            this.buttonDragDropStore = new System.Windows.Forms.Button();
+            this.buttonExecute = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textBoxFile
@@ -113,26 +115,6 @@
             this.buttonStore.UseVisualStyleBackColor = true;
             this.buttonStore.Click += new System.EventHandler(this.buttonStore_Click);
             // 
-            // buttonDragDropStore
-            // 
-            this.buttonDragDropStore.AllowDrop = true;
-            this.buttonDragDropStore.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.store;
-            resources.ApplyResources(this.buttonDragDropStore, "buttonDragDropStore");
-            this.buttonDragDropStore.Name = "buttonDragDropStore";
-            this.buttonDragDropStore.UseVisualStyleBackColor = true;
-            this.buttonDragDropStore.DragDrop += new System.Windows.Forms.DragEventHandler(this.buttonDragDropStore_DragDrop);
-            this.buttonDragDropStore.DragEnter += new System.Windows.Forms.DragEventHandler(this.textBox1_DragEnter);
-            // 
-            // buttonDragDropStoreAndExecute
-            // 
-            this.buttonDragDropStoreAndExecute.AllowDrop = true;
-            this.buttonDragDropStoreAndExecute.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.storeAndExecute;
-            resources.ApplyResources(this.buttonDragDropStoreAndExecute, "buttonDragDropStoreAndExecute");
-            this.buttonDragDropStoreAndExecute.Name = "buttonDragDropStoreAndExecute";
-            this.buttonDragDropStoreAndExecute.UseVisualStyleBackColor = true;
-            this.buttonDragDropStoreAndExecute.DragDrop += new System.Windows.Forms.DragEventHandler(this.buttonDragDropStoreAndExecute_DragDrop);
-            this.buttonDragDropStoreAndExecute.DragEnter += new System.Windows.Forms.DragEventHandler(this.textBox1_DragEnter);
-            // 
             // buttonToggleAlwaysOnTop
             // 
             resources.ApplyResources(this.buttonToggleAlwaysOnTop, "buttonToggleAlwaysOnTop");
@@ -165,15 +147,54 @@
             this.buttonFindCitrix.UseVisualStyleBackColor = true;
             this.buttonFindCitrix.Click += new System.EventHandler(this.buttonFindCitrix_Click);
             // 
+            // buttonDragAndDropExecute
+            // 
+            this.buttonDragAndDropExecute.AllowDrop = true;
+            this.buttonDragAndDropExecute.BackgroundImage = global::CitrixReceiverIcaFileManipulator.Properties.Resources.execute;
+            resources.ApplyResources(this.buttonDragAndDropExecute, "buttonDragAndDropExecute");
+            this.buttonDragAndDropExecute.Name = "buttonDragAndDropExecute";
+            this.buttonDragAndDropExecute.UseVisualStyleBackColor = true;
+            this.buttonDragAndDropExecute.DragDrop += new System.Windows.Forms.DragEventHandler(this.buttonDragAndDropExecute_DragDrop);
+            this.buttonDragAndDropExecute.DragEnter += new System.Windows.Forms.DragEventHandler(this.textBox1_DragEnter);
+            // 
+            // buttonDragDropStoreAndExecute
+            // 
+            this.buttonDragDropStoreAndExecute.AllowDrop = true;
+            this.buttonDragDropStoreAndExecute.BackgroundImage = global::CitrixReceiverIcaFileManipulator.Properties.Resources.storeAndExecute;
+            resources.ApplyResources(this.buttonDragDropStoreAndExecute, "buttonDragDropStoreAndExecute");
+            this.buttonDragDropStoreAndExecute.Name = "buttonDragDropStoreAndExecute";
+            this.buttonDragDropStoreAndExecute.UseVisualStyleBackColor = true;
+            this.buttonDragDropStoreAndExecute.DragDrop += new System.Windows.Forms.DragEventHandler(this.buttonDragDropStoreAndExecute_DragDrop);
+            this.buttonDragDropStoreAndExecute.DragEnter += new System.Windows.Forms.DragEventHandler(this.textBox1_DragEnter);
+            // 
+            // buttonDragDropStore
+            // 
+            this.buttonDragDropStore.AllowDrop = true;
+            this.buttonDragDropStore.BackgroundImage = global::CitrixReceiverIcaFileManipulator.Properties.Resources.store;
+            resources.ApplyResources(this.buttonDragDropStore, "buttonDragDropStore");
+            this.buttonDragDropStore.Name = "buttonDragDropStore";
+            this.buttonDragDropStore.UseVisualStyleBackColor = true;
+            this.buttonDragDropStore.DragDrop += new System.Windows.Forms.DragEventHandler(this.buttonDragDropStore_DragDrop);
+            this.buttonDragDropStore.DragEnter += new System.Windows.Forms.DragEventHandler(this.textBox1_DragEnter);
+            // 
+            // buttonExecute
+            // 
+            resources.ApplyResources(this.buttonExecute, "buttonExecute");
+            this.buttonExecute.Name = "buttonExecute";
+            this.buttonExecute.UseVisualStyleBackColor = true;
+            this.buttonExecute.Click += new System.EventHandler(this.buttonExecute_Click_1);
+            // 
             // MainForm
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.buttonExecute);
             this.Controls.Add(this.buttonFindCitrix);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBoxCitrix);
             this.Controls.Add(this.labelFileDragAndDrop);
             this.Controls.Add(this.buttonToggleAlwaysOnTop);
+            this.Controls.Add(this.buttonDragAndDropExecute);
             this.Controls.Add(this.buttonDragDropStoreAndExecute);
             this.Controls.Add(this.buttonDragDropStore);
             this.Controls.Add(this.buttonStore);
@@ -213,6 +234,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBoxCitrix;
         private System.Windows.Forms.Button buttonFindCitrix;
+        private System.Windows.Forms.Button buttonDragAndDropExecute;
+        private System.Windows.Forms.Button buttonExecute;
     }
 }
 
